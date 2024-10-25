@@ -1,0 +1,26 @@
+graph TB
+    subgraph "API Escalável - Sistema de E-commerce"
+        A[Cliente] -->|Request| B[CDN]
+        B -->|Route| C[Load Balancer]
+        
+        C -->|Distribui| D[API Gateway]
+        
+        D -->|Autenticação| E[Auth Service]
+        E -->|Token| K[(Redis - Cache)]
+        
+        D -->|Produtos| F[Product Service]
+        D -->|Pedidos| G[Order Service]
+        D -->|Pagamentos| H[Payment Service]
+        
+        F -->|Read/Write| I[(Product DB Primary)]
+        I -->|Replica| J[(Product DB Read Replica)]
+        
+        G -->|Mensagem| L[Message Queue]
+        L -->|Processa| M[Order Processing]
+        M -->|Persiste| N[(Order DB)]
+        
+        H -->|Processa| O[Payment Processor]
+        O -->|Confirma| P[(Payment DB)]
+        
+        Q[ElasticSearch] -.->|Search| F
+    end

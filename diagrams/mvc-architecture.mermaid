@@ -1,0 +1,20 @@
+graph TD
+    PV["View<br/>- Lista de Posts<br/>- Editor<br/>- Dashboard"]
+    TM["Templates<br/>- Layout<br/>- Componentes"]
+    
+    PC["Post Controller<br/>- CRUD Posts<br/>- Gestão Tags"]
+    UC["User Controller<br/>- Autenticação<br/>- Permissões"]
+    
+    PM["Post Model<br/>- Estrutura<br/>- Validação"]
+    UM["User Model<br/>- Perfil<br/>- Regras"]
+    DB[(Database<br/>MySQL)]
+    
+    PV <--> PC
+    PV <--> UC
+    TM <--> PC
+    
+    PC <--> PM
+    UC <--> UM
+    
+    PM <--> DB
+    UM <--> DB
