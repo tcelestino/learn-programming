@@ -9,7 +9,10 @@ export const transactions = [
 
 export function groupTransactionsByMonth(transactions: any[]) {
   return transactions.reduce(
-    (acc: { [x: string]: any }, transaction: { date: string; amount: any }) => {
+    (
+      acc: { [x: string]: any },
+      transaction: { date: string; amount: number }
+    ) => {
       const month = transaction.date.substring(0, 7);
       acc[month] = (acc[month] || 0) + transaction.amount;
       return acc;

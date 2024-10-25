@@ -1,11 +1,11 @@
 // Torre de Hanoi
 // Resolve o problema da Torre de Hanoi recursivamente
 export default function towerOfHanoi(
-  n,
+  n: number,
   source = 'A',
   auxiliary = 'B',
   target = 'C',
-  moves = []
+  moves = [],
 ) {
   if (n === 1) {
     moves.push(`Move disk 1 from ${source} to ${target}`);

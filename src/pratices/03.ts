@@ -6,7 +6,7 @@ const app: FastifyInstance = Fastify({
   logger: true,
 });
 
-app.get('/ping', async function handler(request, reply) {
+app.get('/ping', async function handler(_request, _reply) {
   return { pong: 'its works' };
 });
 

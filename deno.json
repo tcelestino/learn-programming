@@ -2,7 +2,22 @@
   "tasks": {
     "dev": "deno run --watch main.ts",
     "server": "deno --allow-sys --allow-net --allow-env --watch src/pratices/03.ts",
-    "test": "deno test --allow-read"
+    "test": "deno test --allow-read",
+    "format": "deno fmt --check"
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 120,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": ["src/**"]
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["no-explicit-any", "require-await"]
+    }
   },
   "imports": {
     "@std/expect": "jsr:@std/expect@1",
