@@ -1,3 +1,6 @@
+import { groupTransactionsByMonth, transactions } from './01.ts';
+
 export function run() {
-  console.log('Exercicies');
+  // Exerciço 1
+  console.log(groupTransactionsByMonth(transactions));
 }

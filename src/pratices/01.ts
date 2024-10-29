@@ -14,5 +14,3 @@ export function groupTransactionsByMonth(transactions: any[]) {
     return acc;
   }, {});
 }
-
-console.log(groupTransactionsByMonth(transactions));
