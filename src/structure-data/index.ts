@@ -1,12 +1,7 @@
 import LinkedList from './linked-list.ts';
 import quickSort from './quick-sort.ts';
-import { fibonacciRecursive, fibonacciDP } from './fibonacci.ts';
-import {
-  firstNonRepeatingChar,
-  maxSubArraySum,
-  findDuplicates,
-  isBalanced,
-} from './array-maps.ts';
+import { fibonacciDP, fibonacciRecursive } from './fibonacci.ts';
+import { findDuplicates, firstNonRepeatingChar, isBalanced, maxSubArraySum } from './array-maps.ts';
 import BinarySearchTree from './tree.ts';
 import towerOfHanoi from './tower-hanoi.ts';
 import isPalindrome from './palindrome.ts';
@@ -51,10 +46,7 @@ export function run() {
 
   // Teste de Palíndromo
   console.log('\n=== Teste de Palíndromo ===');
-  console.log(
-    "'A man a plan a canal Panama':",
-    isPalindrome('A man a plan a canal Panama')
-  ); // true
+  console.log("'A man a plan a canal Panama':", isPalindrome('A man a plan a canal Panama')); // true
   console.log("'race a car':", isPalindrome('race a car')); // false
 
   // Teste de Anagrama
@@ -64,10 +56,7 @@ export function run() {
 
   // Teste de Subarray com Soma Máxima
   console.log('\n=== Teste de Subarray com Soma Máxima ===');
-  console.log(
-    '[-2, 1, -3, 4, -1, 2, 1, -5, 4]:',
-    maxSubArraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4])
-  ); // 6
+  console.log('[-2, 1, -3, 4, -1, 2, 1, -5, 4]:', maxSubArraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
 
   // Teste de Números Duplicados
   console.log('\n=== Teste de Números Duplicados ===');

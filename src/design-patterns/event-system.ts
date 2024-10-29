@@ -17,9 +17,7 @@ export class EventEmitter {
 
   unsubscribe(event: string, callback: Function) {
     if (!this.listeners[event]) return;
-    this.listeners[event] = this.listeners[event].filter(
-      (cb) => cb !== callback
-    );
+    this.listeners[event] = this.listeners[event].filter((cb) => cb !== callback);
   }
 
   unsubscribeAll(events: string[]) {

@@ -15,9 +15,7 @@ export default class RateLimiter {
     const userRequests = this.requests.get(userId) || [];
 
     // Remove expired timestamps
-    const validRequests = userRequests.filter(
-      (timestamp) => now - timestamp < this.windowSize
-    );
+    const validRequests = userRequests.filter((timestamp) => now - timestamp < this.windowSize);
 
     if (validRequests.length < this.maxRequests) {
       validRequests.push(now);

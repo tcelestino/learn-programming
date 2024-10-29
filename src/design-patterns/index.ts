@@ -1,14 +1,5 @@
-import {
-  CreditCardProcessor,
-  PayPalProcessor,
-  PaymentService,
-} from './cc-solid.ts';
-import {
-  errorCallback,
-  EventEmitter,
-  saveCallback,
-  deleteCallback,
-} from './event-system.ts';
+import { CreditCardProcessor, PaymentService, PayPalProcessor } from './cc-solid.ts';
+import { deleteCallback, errorCallback, EventEmitter, saveCallback } from './event-system.ts';
 import AnimalFactory from './factory.ts';
 import DatabaseConnection from './singleton.ts';
 

@@ -1,9 +1,6 @@
 // Anagrama
 // Verifica se duas strings são anagramas uma da outra
-export default function areAnagrams(
-  str1: string | any[],
-  str2: string | any[]
-) {
+export default function areAnagrams(str1: string | any[], str2: string | any[]) {
   if (str1.length !== str2.length) return false;
 
   const charCount = new Map();

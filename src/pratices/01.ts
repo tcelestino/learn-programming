@@ -8,17 +8,11 @@ export const transactions = [
 ];
 
 export function groupTransactionsByMonth(transactions: any[]) {
-  return transactions.reduce(
-    (
-      acc: { [x: string]: any },
-      transaction: { date: string; amount: number }
-    ) => {
-      const month = transaction.date.substring(0, 7);
-      acc[month] = (acc[month] || 0) + transaction.amount;
-      return acc;
-    },
-    {}
-  );
+  return transactions.reduce((acc: { [x: string]: any }, transaction: { date: string; amount: number }) => {
+    const month = transaction.date.substring(0, 7);
+    acc[month] = (acc[month] || 0) + transaction.amount;
+    return acc;
+  }, {});
 }
 
 console.log(groupTransactionsByMonth(transactions));
