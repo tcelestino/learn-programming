@@ -12,7 +12,8 @@
     "semiColons": true,
     "singleQuote": true,
     "proseWrap": "preserve",
-    "include": ["src/**"]
+    "include": ["src/**"],
+    "exclude": ["src/**/__tests__"]
   },
   "lint": {
     "rules": {
